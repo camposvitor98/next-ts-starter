@@ -3,7 +3,10 @@ import "styled-components";
 declare module "styled-components" {
   export interface DefaultTheme {
     title: string;
-    colors: {};
+    colors: {
+      primary: string;
+      secondary: string;
+    };
     font: {
       size: {
         12: string;

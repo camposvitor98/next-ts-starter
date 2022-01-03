@@ -7,20 +7,20 @@ export function setStyle(
 ) {
   const styles = {
     primary: css`
-      background-color: #ccc;
-      color: #222;
+      background-color: ${theme.colors.secondary};
+      color: ${theme.colors.primary};
       &:hover {
-        background-color: ${darken(0.2, `#ccc`)};
+        background-color: ${darken(0.2, `${theme.colors.secondary}`)};
       }
     `,
 
     secondary: css`
-      border: 1px solid #222;
-      color: #222;
+      border: 1px solid ${theme.colors.primary};
+      color: ${theme.colors.primary};
 
       &:hover {
-        border-color: ${lighten(0.2, `#222`)};
-        color: ${lighten(0.2, `#222`)};
+        border-color: ${lighten(0.2, `${theme.colors.primary}`)};
+        color: ${lighten(0.2, `${theme.colors.primary}`)};
       }
     `,
   };

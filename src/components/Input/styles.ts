@@ -1,3 +1,4 @@
+import { darken, lighten } from "polished";
 import styled from "styled-components";
 
 interface ContainerProps {
@@ -14,7 +15,7 @@ export const Container = styled.label<ContainerProps>`
 
   font-size: ${({ theme }) => theme.font.size[16]};
   font-weight: ${({ theme }) => theme.font.weight.medium};
-  color: inherit;
+  color: (${({ theme }) => darken(0.1, `${theme.colors.primary}`)});
 
   div {
     display: flex;
@@ -23,10 +24,11 @@ export const Container = styled.label<ContainerProps>`
 
     padding: 0.75rem 1.5rem;
 
-    border: 1px solid inherit;
+    border: 1px solid ${({ theme }) => darken(0.1, `${theme.colors.primary}`)};
     border-radius: 0.25rem;
 
-    background-color: inherit;
+    background-color: ${({ theme }) =>
+      lighten(0.1, `${theme.colors.secondary}`)};
 
     height: 3.5rem;
 
@@ -37,18 +39,18 @@ export const Container = styled.label<ContainerProps>`
 
       font-size: ${({ theme }) => theme.font.size[18]};
       font-weight: ${({ theme }) => theme.font.weight.regular};
-      color: inherit;
+      color: ${({ theme }) => theme.colors.primary};
 
       &::placeholder {
         font-size: ${({ theme }) => theme.font.size[18]};
         font-weight: ${({ theme }) => theme.font.weight.regular};
-        color: inherit;
+        color: ${({ theme }) => lighten(0.1, `${theme.colors.primary}`)};
       }
     }
 
     svg {
       font-size: ${({ theme }) => theme.font.size[20]};
-      color: inherit;
+      color: ${({ theme }) => theme.colors.primary};
     }
   }
 `;

@@ -1,6 +1,9 @@
 export default {
   title: "default",
-  colors: {},
+  colors: {
+    primary: "#222",
+    secondary: "#ddd",
+  },
   font: {
     size: {
       12: "0.75rem",
